@@ -11,9 +11,9 @@ const __filename = fileURLToPath(import.meta.url)
 const __dirname = dirname(__filename)
 
 //middleware
+app.use(express.json())
 //this line of code used to tell the code that the static file is in another directory
 app.use(express.static(path.join(__dirname, '../public')))
-app.use(express.json())
 
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'index.html'))
