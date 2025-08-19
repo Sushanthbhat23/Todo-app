@@ -2,6 +2,7 @@ import express from 'express'
 import path, {dirname} from 'path'
 import { fileURLToPath } from 'url'
 import authRoutes from './routes/authRoutes.js'
+import todoRoutes from './routes/todoroutes.js'
 
 
 const app = express()
@@ -25,6 +26,7 @@ app.get('/', (req, res) => {
 app.use('/auth', authRoutes)
 
 //handling routes from todoroutes file
+app.use('/todos', todoRoutes)
 
 
 app.listen(PORT, () => {

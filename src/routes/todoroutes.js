@@ -10,4 +10,9 @@ router.post('/', (req,res) => {})
 router.post('/', (req, res) => {})
 
 //update a new todo
-router.put('/', (req, res) => {})
+router.put('/:id', (req, res) => {})
+
+//delete a todo
+router.delete('/:id', (req, res) => {})
+
+export default router
